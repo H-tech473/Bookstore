@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Login></Login>
+      <Signup></Signup>
     </div>
   );
 }

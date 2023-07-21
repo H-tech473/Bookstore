@@ -12,23 +12,23 @@
    --gray: #EAEAEA;
 }
 
-.login-page-container{
+.signup-page-container{
     display: inline-block;
     height: 80vh;
     width: 80vw;
     position: relative;
 }
 
-.login-page{
+.signup-page{
     height: 100%;
     width: 50%;
     display: flex;
-    background-color: var(--blue);
+    background-color: var(--red);
     align-items: center;
     justify-content: center;
 }
 
-.login-center{
+.signup-center{
     height: 70%;
     width: 70%;
     display: flex;
@@ -38,40 +38,50 @@
 
 }
 
-.login-heading-container{
+.signup-heading-container{
     height: 80px;
     font-size: 3rem;
     line-height: 80px;
-    color: var(--black);
+    color: var(--gray);
 }
 
-.login-form-container{
+.signup-form-container{
     height: 60%;
-    width: 15ch;
+    width: calc(15ch + 40px);
+    overflow-y: scroll;
     font-size: 3rem;
+    left: -10px;
+    position: relative;
 }
 
-.login-form{
-    height: 100%;
-    width: 100%;
+.signup-form{
+    height: 150%;
+    width: calc(100% - 30px);
+    display: flex;
+    position: relative;
+    left: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.username-container, .password-container{
+.susername-container, .spassword-container, .semail-container, .spassword-confirm{
     background-color: var(--gray);
     height: 3.5rem;
+    width: 100%;
+    position: relative;
     line-height: 0;
     overflow: hidden;
+}
+.susername-container{
     border-top-left-radius: 10px;
-    position: relative;
     border-top-right-radius: 10px;
 }
-.password-container{
-    top: 5px;
-    border-radius: 0px;
-}
 
-.username-container input,
-.password-container input{
+.susername-container input,
+.spassword-container input,
+.semail-container input,
+.spassword-confirm input{
     height: 70%;
     width: 100%;
     position: absolute;
@@ -85,8 +95,10 @@
     border: none;
 }
 
-.username-container label,
-.password-container label{
+.susername-container label,
+.spassword-container label,
+.spassword-confirm label,
+.semail-container label{
     font-size: 1rem;
     position: absolute;
     left: 6px;
@@ -139,4 +151,26 @@
 .visible:hover{
     background-color: var(--black);
     color: var(--gray);
+}
+
+.scrollbar{
+    height: 100px;
+    width: 10px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    background-color: var(--black);
+}
+
+.signup-form-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.signup-form-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.signup-form-container::-webkit-scrollbar-thumb {
+    background: var(--black); 
+    border-radius: 4px;
 }
