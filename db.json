@@ -1,0 +1,362 @@
+{
+    "genre": [
+        {"type": "Story", "number": 5},
+        {"type": "Fantasy", "number": 5},
+        {"type": "Drama", "number": 8},
+        {"type": "Text Book", "number": 2},
+        {"type": "Mystery", "number": 8},
+        {"type": "Biography", "number": 3}
+    ],
+    "books": [
+        {
+            "id": 1,
+            "title": "Toads And Little Dragons",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor leo a diam. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Quisque sagittis purus sit amet. Sed velit dignissim sodales ut eu sem integer vitae justo. Urna cursus eget nunc scelerisque. Varius quam quisque id diam vel quam elementum. Tempor orci eu lobortis elementum nibh tellus molestie nunc. Netus et malesuada fames ac turpis egestas sed tempus. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Viverra ipsum nunc aliquet bibendum enim. Leo in vitae turpis massa sed elementum tempus egestas. Viverra justo nec ultrices dui sapien eget mi proin sed. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Viverra mauris in aliquam sem fringilla ut morbi. Enim tortor at auctor urna. Et leo duis ut diam quam nulla porttitor massa id. Cursus euismod quis viverra nibh cras pulvinar. Vestibulum sed arcu non odio euismod lacinia.",
+            "category": "Story",
+            "image": "https://vignette.wikia.nocookie.net/disney/images/0/00/IMG_0687a.jpg/revision/latest?cb=20130807013713",
+            "rating": {
+            "rate": 3.9,
+            "count": 120,
+            "pageCount": 100
+            }
+        },{
+            "id": 2,
+            "title": "Chickens And Cows",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Volutpat commodo sed egestas egestas fringilla phasellus. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Nisl nunc mi ipsum faucibus vitae. Volutpat diam ut venenatis tellus.",
+            "category": "Story",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/91T2Iy6f9sL.jpg",
+            "rating": {
+            "rate": 3.0,
+            "count": 110,
+            "pageCount": 180
+            }
+        },{
+            "id": 3,
+            "title": "Ghosts In The River",
+            "description": "Auctor Et Leo Elit Consectetur Primis Netus Vehicula Suscipit Inceptos Euismod Cras Risus Consequat Augue Euismod Etiam Tristique Sociosqu Orci Proin Ullamcorper Orci Faucibus Dolor Porttitor Pellentesque Metus Taciti Ullamcorper Iaculis Elit Dictumst Rhoncus Porttitor Per Eleifend Semper Amet Ut Neque Donec Sollicitudin Urna Sagittis Commodo Odio Interdum Ultrices Sem Leo Massa Scelerisque Luctus Fringilla Neque Ornare Morbi Lobortis A Cursus Est At Sed Duis Dapibus Aenean Sem Ac Purus Aliquet Nostra Et Odio Ac Dui Ultricies Scelerisque Nulla Dapibus Non Velit Tristique Hac Enim Pretium Consequat Blandit Class Platea Eget Vestibulum Dui Conubia Tempor Elit Himenaeos Vel Convallis Risus",
+            "category": "Story",
+            "image": "https://www.bookywooky.in/wp-content/uploads/2019/06/IMG-20190619-WA0046.jpg",
+            "rating": {
+            "rate": 4.0,
+            "count": 10,
+            "pageCount": 50
+            }
+        },{
+            "id": 4,
+            "title": "Jealous Of The River",
+            "description": "Consequat Dictum Venenatis Metus Iaculis Pharetra Vitae Convallis Condimentum Lobortis Nisi Rutrum Ad Tristique Sodales Dolor Tempor Eget Orci Quis Dictumst Commodo Eu Maecenas Potenti Nibh Ultrices Tristique Litora Ut Lobortis Nisl Bibendum Fringilla Sem Ultricies Eros Ipsum Mauris Imperdiet Erat In Per Laoreet Venenatis Maecenas Hac Rhoncus Faucibus Viverra",
+            "category": "Story",
+            "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347585313i/956478.jpg",
+            "rating": {
+            "rate": 3.5,
+            "count": 70,
+            "pageCount": 140
+            }
+        },{
+            "id": 5,
+            "title": "Ghosts In The River",
+            "description": "Mauris Libero Pretium Suscipit Fames Mauris Blandit Per Habitasse Donec Torquent Cras Consectetur Molestie Adipiscing Senectus Etiam Mauris Leo Suspendisse Orci Netus Viverra Suscipit Mollis Sit Orci Pharetra Per Enim Donec Taciti Suspendisse Dui Consequat Lectus Lobortis Malesuada Ullamcorper Orci Sodales Est Bibendum Velit Hac Pulvinar Tempor Vitae Amet Donec Cras Et Potenti Dictumst Sem Quisque Facilisis Vitae Ornare Primis Lectus Venenatis In Luctus Sem Gravida Phasellus Proin At Justo",
+            "category": "Story",
+            "image": "https://cdn.exoticindia.com/images/products/original/books-2019/nat715.jpg",
+            "rating": {
+            "rate": 3.2,
+            "count": 19,
+            "pageCount": 40
+            }
+        },{
+            "id": 6,
+            "title": "Invader Of Desire",
+            "description": "Eget Mollis Cras Commodo Convallis Placerat Massa Venenatis Aliquam Commodo Diam Enim Nec Condimentum Vestibulum Congue Laoreet Mauris Class Quisque Malesuada Pulvinar Lorem Litora Orci Id Viverra Sapien Congue Porta",
+            "category": "Fantasy",
+            "image": "https://th.bing.com/th/id/OIP.4MObQpm9fFQY8Tvg2ibwsgHaJs?pid=ImgDet&rs=1",
+            "rating": {
+            "rate": 2.9,
+            "count": 240,
+            "pageCount": 20
+            }
+        },{
+            "id": 7,
+            "title": "Slaves Of The Lost Ones",
+            "description": "Porttitor Ante Nullam Tellus Turpis Himenaeos Metus Quis Nulla Iaculis Senectus Suspendisse Sodales Tempor Purus Semper Posuere Integer Eleifend Aliquam Libero Posuere Eu Pellentesque Netus Augue Aliquam Euismod Ullamcorper Pretium Nibh Litora Interdum Quisque Justo Pharetra Quam Conubia Sodales Curabitur",
+            "category": "Fantasy",
+            "image": "https://sothebys-md.brightspotcdn.com/dims4/default/a833a71/2147483647/strip/true/crop/1448x2000+0+0/resize/2048x2829!/quality/90/?url=https:%2F%2Fsothebys-md.brightspotcdn.com%2F79%2F43%2F90eea4a140c4b7767b1c463edcb0%2Fl19404-b598k-2.jpg",
+            "rating": {
+            "rate": 2.8,
+            "count": 100,
+            "pageCount": 292
+            }
+        },{
+            "id": 8,
+            "title": "Elves And Warlocks",
+            "description": "Quisque Tempor Per Pulvinar Sed Condimentum Nullam Rhoncus Ultricies Aptent Nam Ligula Tellus Laoreet Inceptos Dui Quisque Felis Ornare Ultricies Non Per In Enim Ligula Fermentum Tempus Lobortis At Ullamcorper Et Cubilia Purus Pulvinar Hac Inceptos Ultricies Faucibus Blandit Nostra",
+            "category": "Fantasy",
+            "image": "https://i1.wp.com/bookzone.boyslife.org/files/2016/02/9780141321004.jpg",
+            "rating": {
+            "rate": 3.4,
+            "count": 40,
+            "pageCount": 84
+            }
+        },{
+            "id": 9,
+            "title": "Future Of The Stockades",
+            "description": "Auctor Sociosqu Netus Torquent Lectus Nulla Primis Non Praesent Feugiat Vivamus Senectus Justo Adipiscing Rutrum Ut Consectetur Imperdiet Quisque Vehicula Tincidunt Sapien Ornare Sagittis Vestibulum Dapibus At Maecenas Viverra Hendrerit Semper Porttitor Rhoncus Sed At Taciti Pharetra Pharetra Nostra Diam Id Adipiscing Pharetra Sodales Sit Phasellus Augue Potenti Massa Platea Eu Curabitur Curabitur Tellus Diam Per Cras Vehicula Suscipit Morbi Enim Auctor Ut Nulla Cras Hac Vestibulum Adipiscing Ornare Netus",
+            "category": "Fantasy",
+            "image": "https://www.bing.com/images/search?view=detailV2&ccid=G4Lpq5RU&id=CFCD1CA8D69D7578D06BBB9E3B930586DCC055C6&thid=OIP.G4Lpq5RUHr-mlc3tDRCQOgHaJ2&mediaurl=https%3A%2F%2Fwww.blackgate.com%2Fwp-content%2Fuploads%2F2014%2F01%2FThe-Big-Book-of-Adventure-Stories1.jpg&exph=1600&expw=1202&q=adventure+books&simid=608002494440626814&form=IRPRST&ck=CEF0E0C7C4AD862C32FDC0DE2D7FB5BD&selectedindex=9&ajaxhist=0&ajaxserp=0&vt=0&sim=11",
+            "rating": {
+            "rate": 3.2,
+            "count": 60,
+            "pageCount": 136
+            }
+        },{
+            "id": 10,
+            "title": "Commanding Hope",
+            "description": "Convallis Consectetur Duis Viverra Adipiscing Luctus Neque Elementum Ultrices Ultricies Vel Taciti Faucibus Sem Sagittis Molestie Massa Nisl Cursus Lacinia Leo Blandit Quam Non Porta Orci Eu Torquent Donec Egestas Pharetra Vehicula Cras Litora Ipsum Pellentesque Dictumst Accumsan Porta Porta Litora Facilisis Habitant Praesent Libero Placerat Sem Adipiscing Nullam Aptent",
+            "category": "Fantasy",
+            "image": "https://www.bing.com/images/search?view=detailV2&ccid=rr1YIF32&id=9F8430345BDBE942DABD4A069C348ED95A5B8797&thid=OIP.rr1YIF32UfCcgGGl8pbuywHaKO&mediaurl=https%3A%2F%2Fsothebys-md.brightspotcdn.com%2Fdims4%2Fdefault%2Fa833a71%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F1448x2000%2B0%2B0%2Fresize%2F2048x2829!%2Fquality%2F90%2F%3Furl%3Dhttps%3A%252F%252Fsothebys-md.brightspotcdn.com%252F79%252F43%252F90eea4a140c4b7767b1c463edcb0%252Fl19404-b598k-2.jpg&exph=2829&expw=2048&q=adventure+books&simid=608031176244541089&form=IRPRST&ck=2A92F2867C1DF2D6BAB7C685A86A7DE9&selectedindex=13&ajaxhist=0&ajaxserp=0&vt=0&sim=11",
+            "rating": {
+            "rate": 4.1,
+            "count": 80,
+            "pageCount": 237
+            }
+        },{
+            "id": 11,
+            "title": "Girls Of Agony",
+            "description": "Consectetur Ultricies Nullam Quisque Suscipit Vulputate Primis Ut Donec Sapien Id Dolor Curabitur Auctor Cras Blandit Ad Curae Ut Iaculis Metus Nulla Cursus Est Potenti Eleifend Eu Gravida Senectus Fusce Consequat Convallis Convallis Fames Vel Primis Venenatis Sodales Lectus Lectus",
+            "category": "Drama",
+            "image": "https://www.adazing.com/wp-content/uploads/2019/04/A1KGlo3DAZL._AC_UL436_.jpg",
+            "rating": {
+            "rate": 4.2,
+            "count": 270,
+            "pageCount": 137
+            }
+        },{
+            "id": 12,
+            "title": "Invader Of The West",
+            "description": "Augue Justo Metus Habitasse Pulvinar Vel Sed Eleifend Eros Scelerisque Hendrerit Pretium Curabitur Hendrerit Sem Ullamcorper Et Non Condimentum Nunc Tristique Euismod Dictum Placerat In Augue Urna Congue Tincidunt Ad Aenean Sagittis Egestas Aliquet A Habitant Etiam Eu Suscipit Sollicitudin",
+            "category": "Drama",
+            "image": "https://th.bing.com/th/id/R.b2b261ba686a7e8034559b2dac5da19b?rik=JRLYF%2f%2bvxjGF7Q&riu=http%3a%2f%2fupgradewithdawn.com%2fstorage%2fBook_DramaFree_CindiMcMenamin_UPGRADEwithDawn.jpg%3f__SQUARESPACE_CACHEVERSION%3d1553314765994&ehk=%2b2B1DiNL8emmm1WHmPsRDHls1AUvFJ4rrWXTtg6rz2g%3d&risl=1&pid=ImgRaw&r=0",
+            "rating": {
+            "rate": 3.4,
+            "count": 101,
+            "pageCount": 126
+            }
+        },{
+            "id": 13,
+            "title": "Ruination Of Power",
+            "description": "Eget Turpis Sagittis Malesuada Fusce Sapien Eget Fusce Placerat Lorem Himenaeos Lorem Metus Etiam Quisque Turpis Odio Metus Suspendisse Curabitur Id Pulvinar Cursus Sodales Massa Varius Suscipit Justo Ipsum Nec Feugiat Vel Aliquam Nulla Mi Rhoncus Augue Feugiat Amet Netus Quam Condimentum Nulla Ullamcorper Cras Quisque Elementum Quam Pharetra Morbi Fusce Varius Etiam Pretium Libero Cubilia",
+            "category": "Drama",
+            "image": "https://www.currency.com.au/wp-content/uploads/9781925005349-4.jpg",
+            "rating": {
+            "rate": 4.5,
+            "count": 157,
+            "pageCount": 72
+            }
+        },{
+            "id": 14,
+            "title": "Farmers And Enemies",
+            "description": "Nec Arcu Aliquet Tristique Quis Nulla Interdum Tellus Elit Habitasse Nam Quisque Justo Euismod Donec Ullamcorper Duis Nibh Leo In Proin Quam Venenatis Fringilla Fermentum Odio Ut Vivamus Sed Cursus Pharetra Imperdiet Sem Id Elementum Fringilla Conubia Nisl Cras Quis Viverra Eu Risus Nibh Per Inceptos Elementum Condimentum",
+            "category": "Drama",
+            "image": "",
+            "rating": {
+            "rate": 2.6,
+            "count": 133,
+            "pageCount": 206
+            }
+        },{
+            "id": 15,
+            "title": "Bandits And Girls",
+            "description": "Condimentum Aenean Augue Torquent Torquent Eros Metus Rhoncus Venenatis Pharetra Netus Tristique Risus Quis Curabitur Class Quis Consequat Inceptos Enim Quisque Metus At Integer Dolor Vestibulum Dolor Integer Nullam Facilisis Venenatis Sed Conubia Fringilla Metus Lacinia Malesuada In Porta Interdum Maecenas Taciti Inceptos Nostra Suscipit Aliquet Fames Pretium Eleifend Varius Ligula Sociosqu Diam Sapien Sem Interdum Turpis Nulla Erat Ipsum Netus Rhoncus Nam Quis Iaculis Cursus Ac Sollicitudin Feugiat Porttitor Tortor Nec Auctor Ac Congue Ultrices Metus Curabitur Ac Eget",
+            "category": "Drama",
+            "image": "https://i.pinimg.com/originals/ec/26/e8/ec26e8272aa9594e50e4181ab11ebdfd.jpg",
+            "rating": {
+            "rate": 4.6,
+            "count": 162,
+            "pageCount": 182
+            }
+        },{
+            "id": 16,
+            "title": "Infamous Among The Fog",
+            "description": "Ornare Donec Id Rhoncus Sodales Libero Tortor Mattis Potenti Laoreet Arcu Eleifend Est Viverra Feugiat Nulla Aliquet Erat Neque Magna Consectetur Malesuada Lorem Risus Integer Fames Volutpat Hendrerit Mattis Sit Tortor Ut Aliquam Porttitor At Magna Iaculis Etiam Rutrum Quam Nostra Suscipit Consequat Nostra Volutpat Potenti Commodo Id Tincidunt Sem Dui Nunc Malesuada Est Sagittis Cursus Magna Dui Interdum Ullamcorper",
+            "category": "Drama",
+            "image": "https://www.des.org.gr/wp-content/uploads/2021/10/The-Drama-Book-scaled.jpg",
+            "rating": {
+            "rate": 3.9,
+            "count": 50,
+            "pageCount": 194
+            }
+        },{
+            "id": 17,
+            "title": "Ruins Of The Gods",
+            "description": "Habitasse Velit Aenean Mi Commodo Conubia Magna Luctus Euismod Accumsan Accumsan Fermentum Quam Pharetra Consequat Purus Tempor Habitasse Vehicula Malesuada Donec Ipsum Nec Nullam Per Amet In Mauris Morbi Quisque Velit Dolor Commodo Venenatis Aenean Dui Cras Egestas Nulla Venenatis Accumsan Commodo Auctor Proin Himenaeos Curabitur Vitae Nam Justo Metus Augue Gravida Accumsan Eros Suspendisse Semper Hac Habitasse Blandit Ad Torquent Facilisis Viverra Luctus Senectus Sollicitudin Habitasse Pharetra Rhoncus Suspendisse Scelerisque Mauris Eu Fringilla Potenti",
+            "category": "Drama",
+            "image": "https://th.bing.com/th/id/OIP.du4D_iogwq1Wo8alqpXfZQHaL7?pid=ImgDet&rs=1",
+            "rating": {
+            "rate": 2.9,
+            "count": 37,
+            "pageCount": 147
+            }
+        },{
+            "id": 18,
+            "title": "Bleeding In The Slaves",
+            "description": "Augue Malesuada Mauris Tempor Quis Egestas Tristique Turpis Cubilia Congue Convallis Lectus Semper Metus Rutrum Ornare Nisi Sodales Justo Molestie Morbi Odio Nisl Torquent Commodo Donec Sociosqu Tempus Habitant Fusce Dolor Integer Nisl Sollicitudin Suspendisse",
+            "category": "Drama",
+            "image": "https://th.bing.com/th/id/OIP.T_K8whOAGq8HQky64i9KewHaLG?pid=ImgDet&rs=1",
+            "rating": {
+            "rate": 4.7,
+            "count": 288,
+            "pageCount": 111
+            }
+        },{
+            "id": 19,
+            "title": "Women Of The Revolution",
+            "description": "Curae Etiam Proin Malesuada Purus Sit Aliquet Odio Netus Porta Ad Posuere At Proin Aenean Praesent Gravida Convallis Hac Dictum Etiam Molestie Fermentum Blandit Vivamus Tristique Proin Elit Libero Rhoncus Praesent Lacus Augue Commodo Quisque Nisi Interdum Posuere Curabitur Quam Auctor Pretium Potenti Praesent Mi Porta Nam Dui Platea Consectetur At Ante Eu Nulla Pulvinar Eu Quam Congue Eros Integer",
+            "category": "Text Book",
+            "image": "https://th.bing.com/th/id/OIP.awf3jF7bA3KVxShslw3W9AHaLc?pid=ImgDet&rs=1",
+            "rating": {
+            "rate": 4.0,
+            "count": 122,
+            "pageCount": 164
+            }
+        },{
+            "id": 20,
+            "title": "Elements Of The Jungle",
+            "description": "Vivamus Rhoncus Sagittis Elementum Lorem Ut Eros Ac Aliquam Tempor Cubilia Quis Ac Mi Congue Imperdiet Etiam Risus In Habitant Faucibus Lectus Ipsum Condimentum Nostra Curabitur At Rutrum Risus Potenti",
+            "category": "Text Book",
+            "image": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2017/01/enceladus.jpg?auto=format&q=60&fit=max&w=930",
+            "rating": {
+            "rate": 2.4,
+            "count": 154,
+            "pageCount": 90
+            }
+        },{
+            "id": 21,
+            "title": "Criminals And Gods",
+            "description": "Rhoncus Lacus Sollicitudin Praesent Tempus Donec Duis Rhoncus Torquent Vivamus Tellus Malesuada Consequat Elementum Urna Ornare Vivamus Non Purus Nisi Volutpat Tristique Nibh Vehicula Imperdiet Rhoncus Aptent Felis Fames Ac Odio Cursus Suspendisse Lorem Nunc Scelerisque Conubia Ante Aliquam Magna Risus Tellus Auctor Praesent Orci Fames Netus Aliquam Ante Massa Viverra Vestibulum Amet Class",
+            "category": "Mystery",
+            "image": "https://static2.srcdn.com/wordpress/wp-content/uploads/2020/08/b1-13.jpg",
+            "rating": {
+            "rate": 3.8,
+            "count": 134,
+            "pageCount": 212
+            }
+        },{
+            "id": 22,
+            "title": "Cyborg Of A Cat",
+            "description": "Lacus Semper Nostra At Lacus Pretium Hac Rhoncus Conubia Conubia Semper Nullam Donec Odio Molestie Odio Potenti Nunc Imperdiet Proin Vestibulum Cubilia A Ac Vulputate Nostra Dapibus Venenatis Tincidunt Risus Conubia Felis Auctor Platea Eget Elit Orci",
+            "category": "Mystery",
+            "image": "https://miblart.com/wp-content/uploads/2020/10/2LTd4fOY.jpeg",
+            "rating": {
+            "rate": 4.2,
+            "count": 30,
+            "pageCount": 257
+            }
+        },{
+            "id": 23,
+            "title": "Death In My Village",
+            "description": "Non Quisque Fames Dolor Aliquam Velit Ornare Ultricies In Quam Iaculis At Massa Integer Nibh Etiam Sit Varius Metus Vulputate Interdum Tristique Nisi Porta Consectetur Fermentum Dictumst Nunc Odio Habitant Pellentesque Cursus Eros Neque Arcu At Cursus Quisque Sed Taciti Congue Viverra Suspendisse Feugiat Dapibus Ac Ipsum Augue Sit Dapibus Sociosqu Convallis Ut Vitae Aptent Pretium Netus Senectus Blandit Fames Morbi Vulputate Vivamus Porttitor Scelerisque Ipsum Vulputate Vulputate Viverra Condimentum Bibendum Nunc Gravida Pulvinar Fringilla Tempus Auctor Cursus Sodales Malesuada Bibendum Fames Vel",
+            "category": "Mystery",
+            "image": "https://hachette.imgix.net/books/9781444960075.jpg?auto=compress,format",
+            "rating": {
+            "rate": 4.1,
+            "count": 220,
+            "pageCount": 271
+            }
+        },{
+            "id": 24,
+            "title": "Essence Of The Mines",
+            "description": "Rutrum Volutpat Lorem Urna Diam Hendrerit Vehicula Est Ultricies Id Vel Porta Donec Donec Aliquet Nisl Suspendisse Tortor Tincidunt Conubia Purus Tristique Etiam Feugiat Turpis Et Quis Suspendisse Vivamus Quis Habitasse Curabitur Massa Eu Augue Feugiat In Mattis",
+            "category": "Mystery",
+            "image": "https://static2.srcdn.com/wordpress/wp-content/uploads/2020/08/b1-15.jpg",
+            "rating": {
+            "rate": 3.4,
+            "count": 249,
+            "pageCount": 49
+            }
+        },{
+            "id": 25,
+            "title": "Puzzles In The River",
+            "description": "Lacinia Ullamcorper Ligula Vehicula Molestie Diam Felis Elit Dictumst Suscipit Conubia Dapibus Eget Ligula Elit Purus Tortor Dictum Massa Et Diam Suspendisse Sapien Semper Volutpat Nullam Semper Duis Pellentesque Est Adipiscing Praesent Interdum Sociosqu Ut Velit Nec Vivamus Ut Iaculis Magna Ultricies Felis Platea Sagittis Aliquam Diam Tortor Ad Tortor Condimentum Ante Ad Rhoncus Quis Ultrices",
+            "category": "Mystery",
+            "image": "https://i.pinimg.com/originals/16/d3/21/16d321709968df3eb2efcc69763aca02.jpg",
+            "rating": {
+            "rate": 3.7,
+            "count": 238,
+            "pageCount": 290
+            }
+        },{
+            "id": 26,
+            "title": "Gods And Foreigners",
+            "description": "Leo Fames Cubilia Etiam Felis Volutpat Per Ante Mauris Rhoncus Dictum Molestie Molestie Duis Curabitur Mauris Quis Rhoncus Etiam Porttitor Auctor Tempus Convallis Nullam Aliquam Dui Vivamus At Integer Amet Condimentum Vestibulum Curae Massa Consectetur Netus Leo Orci Tristique Hendrerit",
+            "category": "Mystery",
+            "image": "https://miblart.com/wp-content/uploads/2020/10/eYTiC-I4-scaled.jpeg",
+            "rating": {
+            "rate": 2.8,
+            "count": 211,
+            "pageCount": 197
+            }
+        },{
+            "id": 27,
+            "title": "Assassins Of The Caves",
+            "description": "Eros Habitasse Curabitur Himenaeos Placerat Quisque Erat Odio Litora Porta Eleifend Fermentum Conubia Elementum Sociosqu Bibendum Porta Platea Mauris Porttitor Magna Nostra Est Euismod Mattis Consequat Neque Luctus Nunc Interdum Vel Est Eget Sed In Euismod Libero Magna Litora Tempor Placerat Cras Ante Feugiat Integer Suscipit Ut Luctus Volutpat Dapibus Habitant Quisque Laoreet Nibh Posuere Conubia Congue A Tristique Vitae Velit Integer Commodo Nostra Sem Aenean Potenti Felis Auctor Cras Donec Non Per Turpis Quam Tellus Turpis Et Commodo Magna Auctor Aptent Cursus Habitasse Ut Tempor Lorem Purus",
+            "category": "Mystery",
+            "image": "https://miblart.com/wp-content/uploads/2020/10/Raymond-Beckham-scaled.jpg",
+            "rating": {
+            "rate": 4.6,
+            "count": 26,
+            "pageCount": 78
+            }
+        },{
+            "id": 28,
+            "title": "Boy Of Outer Space",
+            "description": "Posuere Ultricies Nibh Donec Euismod Pretium Sodales Aliquet Augue Felis Aliquam Netus Suspendisse Quis Ultricies Sagittis Lectus Enim Aliquet Nec Vitae Mi Tincidunt Orci Vulputate Molestie Velit Amet Vivamus Sodales Iaculis Aenean Curabitur Commodo Dictumst Primis Non Faucibus Massa Integer Nisi Quisque Leo Id Eget Ut Nullam Mi Erat Hendrerit Magna Sit Morbi Per Libero Lorem Nibh Semper Dapibus Malesuada Cras Placerat Dictumst Diam Fringilla",
+            "category": "Mystery",
+            "image": "https://th.bing.com/th/id/OIP.risMitdRhsbii2-jMZSjMgHaL2?pid=ImgDet&rs=1",
+            "rating": {
+            "rate": 4.1,
+            "count": 199,
+            "pageCount": 300
+            }
+        },{
+            "id": 29,
+            "title": "Joni: An Unforgettable Story",
+            "description": "Nullam Ad Viverra Dictum Pharetra Nisi Lorem Vivamus Eleifend Duis Praesent Pulvinar Suspendisse Euismod Vel Ultricies Imperdiet Etiam Eu Nibh Ac Quam At Phasellus Nec Donec Metus Quam Dolor Conubia Nec Primis Placerat Orci Erat Enim Vivamus Donec Quisque Sollicitudin Urna Sollicitudin Hac Sodales Augue Mollis Eros Auctor Dapibus Suscipit Suscipit Vestibulum Ut Taciti Molestie Lacinia Urna Cras Suscipit Quisque",
+            "category": "Biography",
+            "image": "https://randommer.io/images/books/124524.webp",
+            "rating": {
+            "rate": 2.0,
+            "count": 150,
+            "pageCount": 116
+            }
+        },{
+            "id": 30,
+            "title": "Truman",
+            "description": "Curabitur Molestie Quis Malesuada Morbi Suscipit Per Eros Hac Bibendum Tempus Imperdiet Euismod Lectus Dictumst Eleifend Ac Scelerisque Turpis Sociosqu Fermentum Per Aptent Lobortis Pellentesque Aliquam Lacus Ultricies Luctus Massa Vulputate Sed Cursus Ultricies Quisque Netus Bibendum Nisl Arcu Neque Morbi Iaculis Facilisis Hac Quam Dictum Placerat Nec Eget Curae Neque Pulvinar Himenaeos Lacinia Tincidunt",
+            "category": "Biography",
+            "image": "https://randommer.io/images/books/2279.webp",
+            "rating": {
+            "rate": 3.5,
+            "count": 159,
+            "pageCount": 76
+            }
+        },{
+            "id": 31,
+            "title": "Moab is My Washpot",
+            "description": "Cras Augue Volutpat Habitasse Neque Mollis Taciti Libero Massa Potenti Conubia Mauris Justo Arcu Est Adipiscing Fusce Enim Mi Congue Condimentum Vivamus Cubilia Enim Urna Risus Nunc Aptent Orci Non Pellentesque Luctus Ut Hendrerit Turpis Ut Curabitur Massa Odio Tortor Metus Tristique Suscipit Venenatis Dolor Quisque Porttitor Inceptos Lobortis Sit Nullam Integer Sed Ornare Odio Felis Senectus Rutrum Inceptos Lobortis Posuere Ultricies Fames Nisi Laoreet Habitasse Urna",
+            "category": "Biography",
+            "image": "https://randommer.io/images/books/66857.webp",
+            "rating": {
+            "rate": 4.2,
+            "count": 129,
+            "pageCount": 219
+            }
+        }
+    ],
+    "users": [
+        {
+            "id": 1, 
+            "fine": 0,
+            "books-issued": [],
+            "books-returned": []
+        }
+    ]
+}
