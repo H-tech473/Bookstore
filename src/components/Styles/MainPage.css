@@ -1,0 +1,27 @@
+:root{
+    --blue: #08D9D6;
+    --black: #252A34;
+    --red: #FF2E63;
+    --gray: #EAEAEA;
+ }
+
+.Login-Signup-section{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    position: relative;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Switchbtn{
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+}

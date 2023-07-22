@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import './Styles/Login.css'
 import {BsEye, BsEyeSlash} from 'react-icons/bs';
-import Motion from './Motion';
 
 function Login() {
 
     const [visible, setvisible] = useState(false);
 
     return ( 
-        <div className='login-page-container'>
             <div className="login-page">
                 <div className="login-center">
                     <div className="login-heading-container">
@@ -17,11 +15,11 @@ function Login() {
                     <div className="login-form-container">
                         <form action="/" method="post" className="login-form" autoComplete='off'>
                             <div className="username-container">
-                                <input type="text" name="username" id="user-name" autoFocus/>
+                                <input type="text" name="username" id="user-name" autoFocus required/>
                                 <label htmlFor="username">Username</label>
                             </div>
                             <div className="password-container">
-                                <input type={visible? "text": "password"} name="password" id="pass-code" />
+                                <input type={visible? "text": "password"} name="password" id="pass-code" required/>
                                 <label htmlFor="password">Password</label>
                                 <span className='visible' onClick={()=>{setvisible(!visible)}}>{!visible ? <BsEye></BsEye>: <BsEyeSlash></BsEyeSlash>}</span>
                             </div>
@@ -30,8 +28,6 @@ function Login() {
                     </div>
                 </div>
             </div>
-            <Motion></Motion>
-        </div>
      );
 }
 

@@ -1,29 +1,13 @@
 import React, { useState } from 'react';
 import './Styles/Signup.css';
 import {BsEye, BsEyeSlash} from 'react-icons/bs';
-import Motion from './Motion';
 
 function Signup() {
 
     const [pvisible, setpvisible] = useState(false);
     const [cvisible, setcvisible] = useState(false);
 
-    const bounceTransition = {
-        y: {
-          duration: 0.4,
-          yoyo: Infinity,
-          ease: "easeOut",
-        },
-        backgroundColor: {
-          duration: 0,
-          yoyo: Infinity,
-          ease: "easeOut",
-          repeatDelay: 0.8,
-        },
-      }
-
     return ( 
-        <div className="signup-page-container">
             <div className="signup-page">
                 <div className="signup-center">
                     <div className="signup-heading-container">
@@ -54,8 +38,6 @@ function Signup() {
                     </div>
                 </div>
             </div>
-            <Motion></Motion>
-        </div>
      );
 }
 

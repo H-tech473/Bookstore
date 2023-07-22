@@ -47,22 +47,18 @@
 
 .signup-form-container{
     height: 60%;
-    width: calc(15ch + 40px);
-    overflow-y: scroll;
+    width: 15ch;
     font-size: 3rem;
-    left: -10px;
-    position: relative;
 }
 
 .signup-form{
-    height: 150%;
-    width: calc(100% - 30px);
+    height: 120%;
+    width: 100%;
     display: flex;
     position: relative;
-    left: 10px;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .susername-container, .spassword-container, .semail-container, .spassword-confirm{

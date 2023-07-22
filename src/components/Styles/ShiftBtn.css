@@ -1,0 +1,33 @@
+:root{
+    --blue: #08D9D6;
+    --black: #252A34;
+    --red: #FF2E63;
+    --gray: #EAEAEA;
+ }
+
+.switch{
+    height: 65px;
+    width: 120px;
+    border-radius: 32px;
+    background-color: var(--black);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    border: 5px solid var(--gray);
+    justify-content: flex-start;
+}
+.switch[data-isOn="true"]{
+    justify-content: flex-end;
+}
+
+.handle{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2rem;
+}

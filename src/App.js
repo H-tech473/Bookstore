@@ -6,6 +6,8 @@ import { fetchAsync } from './features/Books/booksSlice';
 import { fetchuAsync } from './features/Users/usersSlice';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Buttonflip from './components/ShiftBtn';
+import MainPage from './components/MainUserPage';
 
 function App() {
 
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Signup></Signup>
+      <MainPage></MainPage>
     </div>
   );
 }
