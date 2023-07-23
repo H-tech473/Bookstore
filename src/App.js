@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Buttonflip from './components/ShiftBtn';
 import MainPage from './components/MainUserPage';
+import SideMenu from './components/HomePage/Side-Menu';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <MainPage></MainPage>
+      <SideMenu num={3}></SideMenu>
     </div>
   );
 }

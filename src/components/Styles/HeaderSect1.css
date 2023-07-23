@@ -1,0 +1,101 @@
+:root{
+    --blue: #08D9D6;
+    --black: #252A34;
+    --red: #FF2E63;
+    --gray: #EAEAEA;
+ }
+
+.Homesection1{
+    background-color: var(--black);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.side-nav-container{
+    position: relative;
+    left: 0;
+}
+
+.btn{
+    background-color: var(--gray);
+    height: 100px;
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    left: -215px;
+    padding-right: 15px;
+    font-size: 5rem;
+    color: var(--black);
+}
+
+.btn span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.list-of-sections{
+    position: absolute;
+    background-color: var(--gray);
+    height: 100vh;
+    width: 260px;
+    left: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sects{
+    width: 100%;
+    height: 80px;
+    color: var(--gray);
+    overflow: hidden;
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sect-1{
+    background-color: var(--red);
+}
+
+.sect-2{
+    background-color: var(--black);
+}
+
+.sect-3{
+    background-color: var(--blue);
+}
+
+.sectspan{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    position: absolute;
+    padding-right: 100px;
+    height: 100%;
+    line-height: 80px;
+    padding-left: 10px;
+    left: 60px;
+    width: auto;
+}
+
+.sect-icon{
+    font-size: 40px;
+    position: relative;
+    line-height: 80px;
+    height: 100%;
+    width: 60px;
+}
+
+.selected-sect{
+    height: 120px;
+}
