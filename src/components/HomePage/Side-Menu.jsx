@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import '../Styles/HeaderSect1.css';
+import '../Styles/Side-nav.css';
 import {BiChevronRight, BiChevronLeft, BiSolidUserCircle} from 'react-icons/bi';
 import {BsFillInfoCircleFill} from 'react-icons/bs';
 import {AiFillHome} from 'react-icons/ai';
 import {motion} from 'framer-motion';
 
-function SideMenu({num}) {
+function SideMenu({num, clickfun}) {
 
     const [onTapp, setonTap] = useState(true);
     const spring = {
@@ -14,7 +14,6 @@ function SideMenu({num}) {
     }
 
     return ( 
-        <div className='Homesection1'>
             <div className="side-nav-container" style={!onTapp? {paddingLeft: "75px"}: {}}>
                 <motion.span
                     className="btn"
@@ -24,7 +23,10 @@ function SideMenu({num}) {
                     <motion.span 
                         whileTap={{opacity: 0.4}}
                         whileHover={{scale: 1.2}}
-                        onClick={()=>setonTap(!onTapp)}
+                        onClick={()=>{
+                            setonTap(!onTapp);
+                            clickfun();
+                        }}
                         transition={{
                             type: "linear"
                         }}
@@ -42,7 +44,6 @@ function SideMenu({num}) {
                     </nav>
                 </motion.span>
             </div>
-        </div>
      );
 }
 

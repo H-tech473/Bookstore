@@ -5,16 +5,10 @@
     --gray: #EAEAEA;
  }
 
-.Homesection1{
-    background-color: var(--black);
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
-
 .side-nav-container{
     position: relative;
     left: 0;
+    z-index: 999;
 }
 
 .btn{

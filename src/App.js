@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import Buttonflip from './components/ShiftBtn';
 import MainPage from './components/MainUserPage';
 import SideMenu from './components/HomePage/Side-Menu';
+import HomePage from './components/HomePage/Homepage';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <SideMenu num={3}></SideMenu>
+      <HomePage></HomePage>
     </div>
   );
 }
