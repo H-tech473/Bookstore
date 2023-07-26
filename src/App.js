@@ -10,6 +10,7 @@ import Buttonflip from './components/ShiftBtn';
 import MainPage from './components/MainUserPage';
 import SideMenu from './components/HomePage/Side-Menu';
 import HomePage from './components/HomePage/Homepage';
+import Aboutpage from './components/HomePage/About';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <HomePage></HomePage>
+      <Aboutpage></Aboutpage>
     </div>
   );
 }

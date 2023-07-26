@@ -5,12 +5,21 @@ import {BsFillInfoCircleFill} from 'react-icons/bs';
 import {AiFillHome} from 'react-icons/ai';
 import {motion} from 'framer-motion';
 
-function SideMenu({num, clickfun}) {
+function SideMenu({num, backcolor}) {
 
     const [onTapp, setonTap] = useState(true);
     const spring = {
         type: "spring",
         damping: 15
+    }
+    
+    const [cont, setcont] = useState("cont")
+    function fadeUp(){
+      if(cont === "cont"){
+        setcont("cover-container")
+      }else{
+        setcont("cont")
+      }
     }
 
     return ( 
@@ -25,7 +34,7 @@ function SideMenu({num, clickfun}) {
                         whileHover={{scale: 1.2}}
                         onClick={()=>{
                             setonTap(!onTapp);
-                            clickfun();
+                            fadeUp();
                         }}
                         transition={{
                             type: "linear"
@@ -43,6 +52,7 @@ function SideMenu({num, clickfun}) {
                         </motion.div>
                     </nav>
                 </motion.span>
+                <div className={cont} style={{backgroundColor: backcolor}}></div>
             </div>
      );
 }

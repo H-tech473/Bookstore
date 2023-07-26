@@ -3,32 +3,22 @@ import '../Styles/HomePage.css'
 import SideMenu from './Side-Menu';
 import { motion } from 'framer-motion';
 import {BiChevronRight} from 'react-icons/bi';
+import Logoutbtn from '../Logoutbtn';
+
 
 function HomePage() {
 
     const draw = {
         hidden: { pathLength: 0, opacity: 0 },
-        visible: () => {
-          const delay = 0.1;
-          return {
+        visible: {
             pathLength: 1,
             opacity: 1,
             transition: {
-              pathLength: { delay, type: "spring", duration: 3, bounce: 0},
-              opacity: { delay, duration: 0.01 }
+              pathLength: { delay: 0.1 , type: "spring", duration: 3, bounce: 0},
+              opacity: { delay: 0.1 , duration: 0.01 }
             }
-          };
         }
       };
-    
-    const [cont, setcont] = useState("cont")
-    function fadeUp(){
-      if(cont === "cont"){
-        setcont("cover-container")
-      }else{
-        setcont("cont")
-      }
-    }
     const spring = {
         type: "spring",
         damping: 15
@@ -36,9 +26,10 @@ function HomePage() {
 
     return ( 
         <div className='Homesection1'>
-            <SideMenu num={2} clickfun={fadeUp}></SideMenu>
-            <div className={cont}></div>
+            <SideMenu num={2} backcolor={"var(--black)"}></SideMenu>
             <section className='Main-Sect'>
+            <Logoutbtn></Logoutbtn>
+
             <div className="welcome-name">
               <div className='welcomespan'>Welcome</div>
               <div className='namespan'>Harman Kumar</div>
@@ -74,7 +65,6 @@ function HomePage() {
                   <div className="curtain1">
                   </div>
                   <div className="curtain2">
-
                   </div>
                 </div>
             </section>

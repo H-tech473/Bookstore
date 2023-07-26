@@ -1,0 +1,290 @@
+.about-page{
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--red);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashed-box{
+    height: 300px;
+    width: 600px;
+    position: relative;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--gray),
+        var(--gray) 25px,
+        transparent 25px,
+        transparent 50px
+    );
+}
+.dotted-box{
+    height: 300px;
+    width: 600px;
+    background: transparent;
+    background-image: radial-gradient(var(--black) 10px, transparent 0);
+    background-size: 50px 50px;
+    background-position: 0px 0px;
+}
+
+.draft-box{
+    height: 750px;
+    background-color: var(--gray);
+    position: absolute;
+    width: 200px;
+    top: -250px;
+    right: 80px;
+    transform: rotateZ(-45deg);
+}
+.draftblue-box{
+    background-color: var(--blue);
+    height: 100%;
+    width: 40%;
+    position: relative;
+    left: 20px;
+}
+
+.d1{
+    top: -250px;
+    left: -200px;
+}
+.d2{
+    position: absolute;
+    right: 30px;
+    bottom: -100px;
+}
+.d3{
+    position: absolute;
+    right: 130px;
+    bottom: -20px;
+    z-index: 5;
+}
+
+.about-sect{
+    color: var(--gray);
+    position: absolute;
+    top: 150px;
+    left: 130px;
+    font-size: 130px;
+    line-height: 95px;
+    z-index: 20;
+    height: calc(100vh - 200px);
+    width: calc(100vw - 260px);
+}
+
+.about-content{
+    position: relative;
+    top: 50px;
+    border-radius: var(--borderrad);
+    height: calc(100% - 150px);
+    width: 100%;
+    overflow-y: scroll;
+    background-color: var(--gray-blur);
+    backdrop-filter: blur(5px);
+}
+.about-content::-webkit-scrollbar {
+    width: 10px;
+}
+.about-content::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.about-content::-webkit-scrollbar-thumb {
+    background: var(--black); 
+    border-radius: 4px;
+}
+
+/* Paragraph type detail */
+
+.absectcont{
+    height: auto;
+    display: block;
+    z-index: 2;
+    width: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.absecttitle{
+    height: 70px;
+    width: 100%;
+    font-size: 50px;
+    font-family: var(--serif-fam);
+    line-height: 50px;
+    padding: 10px 0;
+    font-weight: bolder;
+    color: var(--black);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.absectpara-content{
+    font-family: var(--san-fam);
+    font-size: 20px;
+    color: var(--black);
+    text-align: left;
+    line-height: 30px;
+    width: 85ch;
+    padding: 10px 0;
+    padding-left: 30px;
+    height: auto;
+    position: relative;
+}
+
+/* FAQ */
+
+.absectfaq-content{
+    height: auto;
+    padding: 10px 0;
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--black);
+    text-align: left;
+}
+
+.absectfaq-ques{
+    padding-top: 10px;
+    width: 85ch;
+    font-weight: bold;
+    border-bottom: 5px solid var(--black-blur);
+    font-family: var(--san-fam);
+    cursor: pointer;
+}
+
+.absectfaq-ans{
+    padding-bottom: 10px;
+    width: 85ch;
+    padding-top: 10px;
+    font-family: var(--san-fam);
+    transition: all 1s ease;
+}
+
+/* News */
+
+.absectnews-content{
+    height: auto;
+    padding: 10px 0;
+    width: auto;
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--black);
+    text-align: left;
+}
+
+.absectnews-list{
+    list-style-type: none;
+}
+
+.absectnews-listitem{
+    width: 85ch;
+    font-family: var(--san-fam);
+    height: auto;
+    text-transform: capitalize;
+    border-bottom: 5px solid var(--black-blur);
+    padding: 5px 0;
+}
+
+.absectnews-listitem::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    transform: translateY(5px);
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--black-blur);
+}
+
+/* objects */
+
+.absectobj-content{
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-evenly;
+}
+
+.absectobj-obj{
+    height: 100%;
+    width: 300px;
+    position: relative;
+}
+
+.svg-cont{
+    height: 100%;
+    width: 100%;
+}
+
+.abscircle1, .abscircle2, .abscircle3{
+    cx: 50%;
+    cy: 50%;
+    stroke-width: 10px;
+    fill: transparent;
+    stroke: var(--black);
+    stroke-linecap: round;
+    r: 100px;
+}
+.abscircle1{
+    animation: path1 1s ease forwards;
+}
+.abscircle2{
+    animation: path2 1s ease forwards;
+}
+.abscircle3{
+    animation: path3 1s ease forwards;
+}
+
+.obj-cont{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    flex-direction: column;
+}
+
+.obj-cont-num{
+    font-family: var(--san-fam);
+    font-weight: bolder;
+    line-height: 80px;
+    font-size: 80px;
+}
+.obj-cont-head{
+    font-family: var(--san-fam);
+    font-weight: bolder;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+@keyframes path1 {
+    0%{
+        stroke-dasharray: 0 calc(3.14* 210px);
+    }
+    100%{
+        stroke-dasharray: calc(3.14* 200px - 100px) 100px;
+    }
+}
+@keyframes path2 {
+    0%{
+        stroke-dasharray: 0 calc(3.14* 210px);
+    }
+    100%{
+        stroke-dasharray: calc(3.14* 200px - 50px) 50px;
+    }
+}
+@keyframes path3 {
+    0%{
+        stroke-dasharray: 0 calc(3.14* 210px);
+    }
+    100%{
+        stroke-dasharray: calc(3.14* 200px - 150px) 150px;
+    }
+}

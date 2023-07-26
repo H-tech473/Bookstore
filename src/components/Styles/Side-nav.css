@@ -19,6 +19,7 @@
     display: inline-block;
     border-radius: 50px;
     display: flex;
+    z-index: 999;
     align-items: stretch;
     justify-content: flex-end;
     left: -215px;
@@ -92,4 +93,25 @@
 
 .selected-sect{
     height: 120px;
+}
+
+.cover-container{
+    pointer-events: all;
+    min-height: 100vh;
+    width: 7%;
+    z-index: 20;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+    z-index: 30;
+}
+.cont{
+    min-height: 100vh;
+    width: 0;
+    position: absolute;
+    transition: all 1s ease;
+    top: 0;
+    left: 0;
 }

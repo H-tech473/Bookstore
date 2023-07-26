@@ -149,15 +149,6 @@
     color: var(--gray);
 }
 
-.scrollbar{
-    height: 100px;
-    width: 10px;
-    right: 0;
-    position: absolute;
-    top: 0;
-    background-color: var(--black);
-}
-
 .signup-form-container::-webkit-scrollbar {
     width: 10px;
 }
