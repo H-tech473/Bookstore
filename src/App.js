@@ -11,6 +11,7 @@ import MainPage from './components/MainUserPage';
 import SideMenu from './components/HomePage/Side-Menu';
 import HomePage from './components/HomePage/Homepage';
 import Aboutpage from './components/HomePage/About';
+import Contacts from './components/HomePage/Contacts';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <Aboutpage></Aboutpage>
+      <Contacts></Contacts>
     </div>
   );
 }

@@ -26,7 +26,7 @@ function HomePage() {
 
     return ( 
         <div className='Homesection1'>
-            <SideMenu num={2} backcolor={"var(--black)"}></SideMenu>
+            <SideMenu num={2} backcolor={"var(--black-blur)"}></SideMenu>
             <section className='Main-Sect'>
             <Logoutbtn></Logoutbtn>
 
