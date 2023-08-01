@@ -94,12 +94,13 @@
 
 .selected-sect{
     height: 120px;
+    filter: brightness(150%);
 }
 
 .cover-container{
     pointer-events: all;
     min-height: 100vh;
-    width: 150px;
+    width: 100px;
     z-index: 20;
     position: absolute;
     backdrop-filter: blur(5px);

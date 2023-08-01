@@ -1,0 +1,180 @@
+.books-search-container{
+    top: 0;
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding: 50px 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    justify-content: center;
+    z-index: 30;
+    align-items: center;
+    background-color: var(--black);
+}
+
+.books-search-bar{
+    background-color: var(--gray);
+    height: 50px;
+    width: 550px;
+    position: relative;
+    font-size: 20px;
+    transition: width .5s ease;
+    z-index: 20;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.books-search-bar-closed{
+    width: 50px;
+}
+
+.books-search-type{
+    width: 100px;
+    left: 0;
+    height: 100%;
+    user-select: none;
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    font-family: var(--san-fam);
+    color: var(--black);
+    cursor: pointer;
+    font-weight: bolder;
+    opacity: .6;
+    border-right: 2px solid var(--black);
+    align-items: center;
+    justify-content: center;
+}
+.books-search-type-closed{
+    width: 50px;
+    font-size: 30px;
+    border: none;
+}
+.books-search-bar:hover .books-search-type,
+.books-search-bar:hover .input-search-btn{
+    opacity: 1;
+}
+
+.input-searchbar{
+    width: 380px;
+    left: 100px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-searchbar input{
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: var(--san-fam);
+    font-weight: bolder;
+    background: none;
+    outline: none;
+    border: none;
+}
+.input-searchbar input::selection{
+    background-color: var(--black-blur);
+    color: var(--gray);
+}
+
+.input-search-btn{
+    width: 70px;
+    user-select: none;
+    left: 480px;
+    position: absolute;
+    height: 100%;
+    color: var(--black);
+    font-size: 30px;
+    cursor: pointer;
+    border-left: 2px solid var(--black);
+    opacity: .6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-sugestions{
+    position: absolute;
+    width: 550px;
+    height: 50px;
+    z-index: 15;
+}
+.suggestioncont{
+    position: absolute;
+    top: 0;
+    border-radius: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    background-color: var(--black-blur);
+}
+.suggestioncont-open{
+    transition: height .5s ease, width 0s;
+    height: 300px;
+}
+.suggestioncont-closed{
+    transition: height .5s .5s ease, width 0s 1s;
+    width: 0;
+    height: 0;
+}
+.suggestioncont .genre, 
+.suggestioncont .rating{
+    height: 200px;
+    position: relative;
+    overflow-y: auto;
+    width: 250px;
+    top: 30px;
+}
+.genre *, .rating *{
+    font-family: var(--san-fam);
+    font-size: 20px;
+    color: var(--gray);
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid var(--gray-blur);
+}
+.genre div:first-child,
+.rating div:first-child{
+    border: none;
+}
+
+.genre::-webkit-scrollbar,
+.rating::-webkit-scrollbar{
+    width: 10px;
+    position: absolute;
+}
+
+.genre::-webkit-scrollbar-track,
+.rating::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+.genre::-webkit-scrollbar-thumb,
+.rating::-webkit-scrollbar-thumb {
+    background: var(--gray); 
+    opacity: .4;
+    border-radius: 5px;
+    top: -10px;
+}
+
+.genre div:hover,
+.rating div:hover{
+    filter:brightness(300%) drop-shadow(0 0 10px var(--blue));
+    font-size: 23px;
+}
+.div-invisible{
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.div-visible{
+    opacity: 1;
+    transition: opacity .5s .5s ease;
+}

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/HomePage.css'
-import SideMenu from './Side-Menu';
 import { motion } from 'framer-motion';
 import {BiChevronRight} from 'react-icons/bi';
-import Logoutbtn from '../Logoutbtn';
 
 
 function HomePage() {
@@ -26,10 +24,7 @@ function HomePage() {
 
     return ( 
         <div className='Homesection1'>
-            <SideMenu num={2} backcolor={"var(--black-blur)"}></SideMenu>
             <section className='Main-Sect'>
-            <Logoutbtn></Logoutbtn>
-
             <div className="welcome-name">
               <div className='welcomespan'>Welcome</div>
               <div className='namespan'>Harman Kumar</div>

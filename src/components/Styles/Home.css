@@ -1,0 +1,47 @@
+.Homepages{
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+}
+
+
+.Homepages::-webkit-scrollbar {
+    height: 10px;
+    top: -10px;
+    position: absolute;
+}
+
+.Homepages::-webkit-scrollbar-track {
+    background: var(--black); 
+}
+
+.Homepages::-webkit-scrollbar-thumb {
+    background: var(--gray); 
+    border-radius: 4px;
+    top: -10px;
+}
+
+.sect{
+    position: absolute;
+    height: calc(100vh + 10px);
+    top: 0px;
+    width: 100vw;
+    box-shadow: 0 20px 0 var(--red);
+}
+.sections-1{
+    left: 0vw;
+    scroll-snap-align: start;
+}
+.sections-2{
+    left: 100vw;
+    scroll-snap-align: start;
+}
+.sections-3{
+    left: 200vw;
+    scroll-snap-align: start;
+}
+

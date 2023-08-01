@@ -14,3 +14,6 @@
     cursor: pointer;
     z-index: 999;
 }
+.logoutbtn:hover{
+    filter: brightness(150%);
+}

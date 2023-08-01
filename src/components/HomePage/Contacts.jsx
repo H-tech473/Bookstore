@@ -9,6 +9,7 @@ function Contacts() {
     const [msg, setmsg] = useState("");
     const [emai, setemail] = useState("");
     const [name, setname] = useState("");
+    const [ele, setele] = useState()
     const rows = [];
     for (let i = 0; i < 13; i++) {
         rows.push(<div key={i} className={"circle circles"+(i+1)} />);
@@ -42,20 +43,32 @@ function Contacts() {
         setemail("");
         setname("");
     }
+    function copyText(val){
+        setele(<div key="hello" className="message"><div className="bar"></div> Text Copied </div>)
+        var range = document.createRange();
+        range.selectNode(document.querySelector("."+val));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();// to deselect
+        setTimeout(() => {
+            setele("");
+        }, 1000);
+    }
 
     return ( 
         <div className="contact-container">
             {rows}
+            {ele}
             <div className="contactinfo-cont">
-            <SideMenu backcolor={"var(--blue-blur)"} num={3}></SideMenu>
                 <div className="infopanel">
                     <div className="info">Information Panel</div>
                     <div className="socialmed-cont">
                         <div className="socials name">Creator - Harmanpreet Kumar</div>
-                        <div className="socials gmail"><span className='ic i1'><BiLogoGmail></BiLogoGmail></span>  sljdljslkdjlsj.com</div>
-                        <div className="socials facebook"><span className='ic i2'><AiFillFacebook></AiFillFacebook></span>  sljdljslkdjlsj.com</div>
-                        <div className="socials insta"><span className='ic i3'><AiFillInstagram></AiFillInstagram></span>  sljdljslkdjlsj.com</div>
-                        <div className="socials twitter"><span className='ic i4'><AiFillTwitterSquare></AiFillTwitterSquare></span>  sljdljslkdjlsj.com</div>
+                        <div className="socials gmail" onClick={()=>copyText("gm")}><span className='ic i1'><BiLogoGmail></BiLogoGmail></span>  <span className='gm' style={{fontFamily: "var(--san-fam)"}}>Hello</span></div>
+                        <div className="socials facebook" onClick={()=>copyText("fa")}><span className='ic i2'><AiFillFacebook></AiFillFacebook></span>  <span className='fa' style={{fontFamily: "var(--san-fam)"}}>Hi</span></div>
+                        <div className="socials insta" onClick={()=>copyText("ins")}><span className='ic i3'><AiFillInstagram></AiFillInstagram></span>  <span className='ins' style={{fontFamily: "var(--san-fam)"}}>kese</span></div>
+                        <div className="socials twitter" onClick={()=>copyText("twi")}><span className='ic i4'><AiFillTwitterSquare></AiFillTwitterSquare></span>  <span className='twi' style={{fontFamily: "var(--san-fam)"}}>ho</span></div>
                     </div>
                 </div>
                 <div className="feedbackpanel">

@@ -7,7 +7,6 @@ function Aboutpage() {
 
     return ( 
         <div className="about-page">
-            <SideMenu backcolor={"var(--red-blur)"} num={1}></SideMenu>
             <section className="about-sect">
                 <div className="abt-title">
                     About
