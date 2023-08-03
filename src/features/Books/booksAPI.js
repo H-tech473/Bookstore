@@ -4,3 +4,6 @@ import axios from "axios";
 export function fetchBooks() {
   return axios.get("http://localhost:8080/books");
 }
+export function fetchGenre() {
+  return axios.get("http://localhost:8080/genre");
+}

@@ -12,8 +12,25 @@
     right: 20px;
     top: 20px;
     cursor: pointer;
-    z-index: 999;
+    z-index: 30;
 }
-.logoutbtn:hover{
+.logoutbtn:hover,
+.homebtn:hover{
     filter: brightness(150%);
+}
+.homebtn{
+    background-color: var(--black);
+    color: var(--blue);
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 30;
 }

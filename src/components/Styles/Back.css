@@ -5,12 +5,11 @@
 }
 .books-result-container{
     z-index: 15;
-    height: calc(100% - 170px);
+    height: calc(100% - 70px);
     width: 100%;
     position: relative;
     top: -30px;
     display: grid;
-    background-color: var(--gray);
     overflow: auto;
     padding: 50px;
     padding-top: 70px;
@@ -18,11 +17,22 @@
     row-gap: 50px;
     column-gap: 50px;
 }
+.dropshadow{
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to bottom, var(--black), transparent);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 15;
+    pointer-events: none;
+}
 .bookcont{
-    background-color: blue;
     border-radius: 20px;
     cursor: pointer;
     overflow: hidden;
+    background-position: center;
+    background-size: cover;
     position: relative;
     height: 400px;
 }
@@ -44,26 +54,220 @@
 .bookcont .books-cont{
     width: 100%;
     height: 100%;
-    background-position: center;
-    background-size: cover;
     position: absolute;
+    opacity: .4;
+    transition: all .5s ease;
     top: 0;
     left: 0;
-    background-image: url("https://vignette.wikia.nocookie.net/disney/images/0/00/IMG_0687a.jpg/revision/latest?cb=20130807013713");
 }
 .bookcont .books-name{
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 120px;
     padding: 15px 30px;
     font-size: 20px;
-    font-family: var(--san-fam);
-    font-weight: bold;
-    bottom: -50px;
+    bottom: -120px;
     color: var(--gray);
     background-color: var(--black-blur);
+    background-image: linear-gradient(to bottom right, var(--black), transparent);
     transition: bottom .5s ease;
 }
+
+.bookcont .books-name *{
+    font-family: var(--san-fam);
+    text-shadow: 0 0 10px var(--blue);
+}
+
 .bookcont:hover .books-name{
     bottom: 0;
+}
+.bookcont:hover .books-cont{
+    background-image: linear-gradient(to top, transparent, var(--gray));
+}
+.bookcont:hover{
+    box-shadow: 0 0 20px var(--black-blur);
+}
+.no-match{
+    font-family: var(--san-fam);
+    font-weight: bold;
+    color: var(--black);
+    text-align: center;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+}
+
+section.Desc-container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: var(--black-blur);
+    backdrop-filter: blur(10px);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow{
+    color: var(--gray);
+    font-size: 60px;
+    position: fixed;
+    opacity: .6;
+    cursor: pointer;
+}
+.disabled{
+    pointer-events: none;
+}
+
+.prev{
+    left: 30px;
+}
+.next{
+    right: 30px;
+}
+.close{
+    padding: 30px;
+    font-size: 40px;
+    top: 0;
+    right: 0;
+}
+.Carousel{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.Car-cont{
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    width: auto;
+    display: flex;
+}
+
+.Car-pages{
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Image-cont, .Text-cont{
+    height: 90%;
+    width: 40%;
+}
+.Text-cont{
+    height: 80%;
+    position: relative;
+}
+.Image-cont{
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+.Text-cont .Title{
+    color: var(--gray);
+    font-family: var(--serif-fam);
+    font-size: 40px;
+    padding: 10px 0;
+}
+.Title::selection{
+    background-color: var(--gray);
+    color: var(--black);
+}
+.Text-cont .small-details{
+    color: var(--black);
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.small-details *{
+    font-family: var(--san-fam);
+    flex-grow: 1;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 20px;
+    color: var(--gray);
+    border: 5px solid var(--gray);
+}
+.small-details *:hover{
+    text-shadow: 0 0 10px var(--black-blur);
+    box-shadow: 0 0 10px var(--gray);
+}
+.ratings{
+    color: var(--gray);
+    display: flex;
+    gap: 10px;
+    font-family: var(--san-fam);
+    padding: 10px 5px;
+    font-size: 1rem;
+}
+.ratings .Star-y{
+    color: var(--blue);
+}
+.description{
+    color: var(--gray);
+    width: 100%;
+    background-color: var(--black-blur);
+    max-height: 50%;
+    cursor: default;
+    margin-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: var(--san-fam);
+    padding: 10px;
+}
+.description::selection{
+    background-color: var(--gray);
+    color: var(--black);
+}
+.description::-webkit-scrollbar {
+    width: 10px;
+    top: -10px;
+    position: absolute;
+}
+
+.description::-webkit-scrollbar-track {
+    background: var(--black); 
+}
+
+.description::-webkit-scrollbar-thumb {
+    background: var(--gray); 
+    border-radius: 4px;
+    top: -10px;
+}
+
+.Issue{
+    color: var(--gray);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-size: 40px;
+    position: absolute;
+    font-weight: bolder;
+    bottom: 60px;
+    cursor: pointer;
+    font-family: var(--san-fam);
+    justify-content: center;
+    width: 60%;
+    border-radius: 50px;
+    border: 5px solid var(--gray);
 }
