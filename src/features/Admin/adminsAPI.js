@@ -1,0 +1,9 @@
+import axios from "axios";
+
+// A mock function to mimic making an async request for data
+export function fetchAdmin() {
+  return axios.get("http://localhost:8080/admin");
+}
+export function updatePatch(action) {
+  return axios.patch("http://localhost:8080/admin", action);
+}

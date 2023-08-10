@@ -2,34 +2,54 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {FaAngleLeft, FaAngleRight, FaStar} from 'react-icons/fa';
 import {VscClose} from 'react-icons/vsc';
-import {motion, useAnimate} from 'framer-motion';
+import {motion} from 'framer-motion';
 import Homebtn from '../Homebtn';
 import Logoutbtn from '../Logoutbtn';
 import {
-  fetchAsync,
-  fetgenreAsync
-} from '../../features/Books/booksSlice';
+  incrementQueriedBooks,
+  fineAsync,
+  removeAsync,
+  IssueUpdate
+} from '../../features/Users/usersSlice';
 import '../Styles/Back.css';
 import Searchbar from './Searchbar';
 import Bookcont from './Bookcont';
+import {
+  updateAsync
+} from '../../features/Admin/adminsSlice';
 
 function Books() {
 
   const [bookIndex, setbookIndex] = useState(0);
   const [dis, setdis] = useState("disabled");
+  const [ele, setele] = useState("");
+  const [dix, setdix] = useState(true);
   const [hove, sethove] = useState(false);
+  const dispatch = useDispatch();
   const books = useSelector(selector=>selector.book.books);
   const genre = useSelector(selector=>selector.book.genre);
+  const userLogged = useSelector(selector=>selector.user.user)
   const [allbooks, setallbooks] = useState([]);
   useEffect(()=>{
     setallbooks(books);
+    const e = document.querySelector(".Carousel")
+    e.style.scrollBehavior = 'auto'
   },[books])
+  useEffect(()=>{
+    setdix(addDays(new Date(userLogged.latestissuedate),2) < new Date())
+  },[userLogged])
   useEffect(()=>{
     const e = document.querySelector(".Carousel")
     e.scrollLeft = 1536*bookIndex;
     e.style.scrollBehavior = "smooth";
-    
+
   },[bookIndex])
+  
+  function addDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+  }
 
   function filterByGenre(type){
     setsearch("")
@@ -99,9 +119,19 @@ function Books() {
   }
 
   function Clicked(e){
-    console.log(e);
     setbookIndex(e);
     setdis("")
+  }
+
+  const issued = (book) => {
+    const dt = new Date();
+    dispatch(incrementQueriedBooks({user: userLogged, book: book, type: "Issue"}));
+    dispatch(IssueUpdate({user: userLogged, book: book, type: "Issue"}))
+    setele(<div key="hello" className="message"><div className="bar"></div> Request sent </div>)
+    dispatch(updateAsync({book: book.id, issuer: userLogged.id, type: "Issue"}))
+    setTimeout(() => {
+      setele("")
+    }, 1500);
   }
 
   return (
@@ -134,7 +164,9 @@ function Books() {
                         <div className='bookcount-c'>Count - {book.rating.count}</div>
                       </div>
                       <div className='description'>{book.description}</div>
-                      <motion.div whileHover={{backgroundColor: 'var(--gray)', color: 'var(--black)'}} className='Issue'>Issue</motion.div>
+                      <motion.div onClick={()=>
+                        issued(book)
+                      } whileHover={{backgroundColor: 'var(--gray)', color: 'var(--black)'}} className={dix?'Issue': 'Issue div--disabled'}>Issue</motion.div>
                     </div>
                   </div>
                 )
@@ -144,6 +176,7 @@ function Books() {
             <PrevArrow />
             <NextArrow />
           </div>
+          {ele}
         </motion.section>
     </div>
   );
