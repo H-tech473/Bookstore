@@ -11,15 +11,7 @@ export const fetchAsync = createAsyncThunk(
   'books/fetchbooks',
   async () => {
     const response = await fetchBooks();
-    let array = response.data;
-    let currentIndex = array.length,  randomIndex;
-    while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-    return array;
+    return response.data;
   }
 );
 export const fetgenreAsync = createAsyncThunk(

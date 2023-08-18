@@ -21,6 +21,7 @@ import {
 function Books() {
 
   const [bookIndex, setbookIndex] = useState(0);
+  const [scb, setscb] = useState("auto")
   const [dis, setdis] = useState("disabled");
   const [ele, setele] = useState("");
   const [dix, setdix] = useState(true);
@@ -30,26 +31,23 @@ function Books() {
   const genre = useSelector(selector=>selector.book.genre);
   const userLogged = useSelector(selector=>selector.user.user)
   const [allbooks, setallbooks] = useState([]);
-  useEffect(()=>{
-    setallbooks(books);
-    const e = document.querySelector(".Carousel")
-    e.style.scrollBehavior = 'auto'
-  },[books])
-  useEffect(()=>{
-    setdix(addDays(new Date(userLogged.latestissuedate),2) < new Date())
-  },[userLogged])
-  useEffect(()=>{
-    const e = document.querySelector(".Carousel")
-    e.scrollLeft = 1536*bookIndex;
-    e.style.scrollBehavior = "smooth";
-
-  },[bookIndex])
-  
   function addDays(date, days) {
     var result = new Date(date);
     result.setDate(result.getDate() + days);
     return result;
   }
+  useEffect(()=>{
+    const e = document.querySelector(".Carousel")
+    setallbooks(books);
+  },[books])
+  useEffect(()=>{
+    setdix(addDays(new Date(userLogged.latestissuedate),2) < new Date() || userLogged.latestissuedate === '')
+  },[userLogged])
+  useEffect(()=>{
+    const e = document.querySelector(".Carousel")
+    e.scrollLeft = 1536*bookIndex;
+    setscb("smooth")
+  },[bookIndex])
 
   function filterByGenre(type){
     setsearch("")
@@ -61,13 +59,14 @@ function Books() {
   }
 
   function filterByRating(num){
-    setsearch('')
+    setsearch("")
     setallbooks(books.filter(ele=> ele.rating.rate >= num && ele.rating.rate < num+1));
   }
+
+  function SearchByText(Text){
+    setallbooks(books.filter(ele=> ele.title.toLowerCase().includes(Text.toLowerCase())))
+  }
   const [search, setsearch] = useState("");
-  useEffect(()=>{
-    setallbooks(books.filter(ele=> ele.title.toLowerCase().includes(search.toLowerCase())))
-  },[search])
 
   const NextArrow = () => {
 
@@ -119,6 +118,7 @@ function Books() {
   }
 
   function Clicked(e){
+    setscb("auto")
     setbookIndex(e);
     setdis("")
   }
@@ -127,6 +127,7 @@ function Books() {
     const dt = new Date();
     dispatch(incrementQueriedBooks({user: userLogged, book: book, type: "Issue"}));
     dispatch(IssueUpdate({user: userLogged, book: book, type: "Issue"}))
+    setdix(false)
     setele(<div key="hello" className="message"><div className="bar"></div> Request sent </div>)
     dispatch(updateAsync({book: book.id, issuer: userLogged.id, type: "Issue"}))
     setTimeout(() => {
@@ -138,7 +139,7 @@ function Books() {
     <div className='books'>
       <Homebtn></Homebtn>
       <Logoutbtn></Logoutbtn>
-      <Searchbar hove={hove} gen={genre} filtergen={filterByGenre} filterate={filterByRating} search={[search, setsearch]}></Searchbar>
+      <Searchbar hove={hove} gen={genre} filtergen={filterByGenre} filterate={filterByRating} search={[search, setsearch]} searchtext={SearchByText}></Searchbar>
       <div className="books-result-container" onMouseOver={()=>sethove(true)} onMouseLeave={()=>sethove(false)}>
         <div className='dropshadow'></div>
         {allbooks.length === 0 ? <div className='no-match'>No match found</div>: ""}
@@ -149,7 +150,7 @@ function Books() {
         })}
       </div>
         <motion.section variants={{hidden: {opacity: 0}, visible: {opacity: 1}}} initial={dis==="disabled"?"visible":"hidden"} animate={dis==="disabled"?"hidden":"visible"} className={"Desc-container"+dis}>
-          <div className='Carousel'>
+          <div className='Carousel' style={{scrollBehavior: scb}}>
             <div className='Car-cont'>
               {allbooks.map((book, ind)=>{
                 return (

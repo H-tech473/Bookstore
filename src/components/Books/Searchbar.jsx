@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {AiOutlineSearch} from 'react-icons/ai'
 import '../Styles/Searchbar.css';
 
-function Searchbar({hove, gen, filtergen, filterate, search}) {
+function Searchbar({hove, gen, filtergen, filterate, search, searchtext}) {
   useEffect(()=>{
     if(hove){
       if(barstate === 2){
@@ -100,7 +100,10 @@ function Searchbar({hove, gen, filtergen, filterate, search}) {
         <div className={"books-search-bar "+(barstate===1?" books-search-bar-closed ":"")} style={{pointerEvents: clos}} onMouseOver={()=>sethov(true)} onMouseLeave={()=>sethov(false)}>
           <div className={"books-search-type"+(barstate===1?" books-search-type-closed":"")} onClick={barstate===1?openSugession:closeSugession}>{type}</div>
           <div className="input-searchbar">
-            <input type="text" name="search" id="searchres" placeholder='Search...' onChange={(e)=>{search[1](e.target.value)}} value={search[0]} autoComplete='off'/>
+            <input type="text" name="search" id="searchres" placeholder='Search...' onChange={(e)=>{
+              search[1](e.target.value)
+              searchtext(e.target.value);
+              }} value={search[0]} autoComplete='off'/>
           </div>
           <div className="input-search-btn"><AiOutlineSearch></AiOutlineSearch></div>
         </div>

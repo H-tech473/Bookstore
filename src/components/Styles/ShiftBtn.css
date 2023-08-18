@@ -16,7 +16,7 @@
     border: 5px solid var(--gray);
     justify-content: flex-start;
 }
-.switch[data-isOn="true"]{
+.swit{
     justify-content: flex-end;
 }
 

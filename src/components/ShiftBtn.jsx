@@ -22,7 +22,7 @@ function Buttonflip({flip, Text}) {
     }
 
     return ( 
-        <div className="switch" data-isOn={isOn} onClick={toggleSwitch}>
+        <div className={isOn?"switch swit":"switch"} onClick={toggleSwitch}>
             <motion.div style={!isOn?color1:color2} className="handle" layout transition={spring} >{Text}</motion.div>
         </div>
      );

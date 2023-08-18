@@ -98,7 +98,6 @@
     font-size: 1rem;
     position: absolute;
     left: 6px;
-    color: var(--black);
     opacity: 1;
     top: 20%;
     font-family: 'DM Sans', sans-serif;
@@ -149,15 +148,38 @@
     color: var(--gray);
 }
 
-.signup-form-container::-webkit-scrollbar {
-    width: 10px;
+.message1{
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    color: var(--gray);
+    top: 30px;
+    font-weight: bolder;
+    padding: 0 30px;
+    font-family: var(--san-fam);
+    background-color: var(--black-blur);
+    z-index: 25;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    bottom: 100px;
 }
 
-.signup-form-container::-webkit-scrollbar-track {
-    border-radius: 10px;
+.message1 .bar{
+    content: "";
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    background-color: var(--gray-blur);
+    animation: widthcover 1s ease forwards;
 }
-
-.signup-form-container::-webkit-scrollbar-thumb {
-    background: var(--black); 
-    border-radius: 4px;
+@keyframes widthcover {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
 }

@@ -403,7 +403,11 @@
       }
     }
   ],
-  "users": [
+  "user": [
+    {
+      "id": -2,
+      "userCount": 8
+    },
     {
       "booksissued": [
         {
@@ -421,42 +425,155 @@
           "type": "Return"
         },
         {
-          "queryid": 5,
-          "bookid": 28,
+          "queryid": 4,
+          "bookid": 12,
           "issueddate": "2023-08-10",
-          "type": "Issue"
+          "type": "Return",
+          "replied": true
         }
       ],
-      "messages": [],
+      "messages": [
+        {
+          "messageid": 1,
+          "type": "Normal",
+          "message": "Your Request with request id Accepted by the admin."
+        }
+      ],
       "id": 1,
-      "timestamp": "2023-08-10T06:06:26.770Z",
+      "timestamp": "2023-08-18T12:35:55.212Z",
       "latestissue": 0,
       "latestquery": 5,
-      "latestMessage": 0,
+      "latestMessage": 1,
       "name": "Harmanpreet kumar",
       "email": "abc@gmail.com",
       "phone": "9898989898",
       "Totfine": 0,
+      "img": "",
       "latestissuedate": "2023-08-10T06:08:36.756Z"
+    },
+    {
+      "booksissued": [],
+      "booksrequested": [],
+      "messages": [],
+      "id": 2,
+      "timestamp": "2023-08-18T13:35:40.167Z",
+      "latestissue": 0,
+      "latestquery": 2,
+      "latestMessage": 1,
+      "name": "Harman",
+      "email": "lks@kk.ld",
+      "password": "$2a$13$86Y/FEanghkUxGvvin6/au936AexyqBie18Ha6/Wt/4CaYMMGVet6",
+      "phone": "3847837877",
+      "Totfine": 0,
+      "latestissuedate": "2023-08-18T12:24:45.366Z"
+    },
+    {
+      "booksissued": [],
+      "booksrequested": [],
+      "messages": [
+        {
+          "messageid": 1,
+          "type": "Normal",
+          "message": "Your Request with request id Accepted by the admin."
+        }
+      ],
+      "id": 4,
+      "timestamp": "2023-08-18T12:36:31.748Z",
+      "latestissue": 0,
+      "latestquery": 2,
+      "latestMessage": 1,
+      "name": "Simran",
+      "email": "lsjdk@ldj.com",
+      "password": "$2a$13$Dw66ge15T8jLoylT1aOMmuICZ.zwCOVoyRUqWlVKZUg16JqwIAU.y",
+      "phone": "NAN",
+      "Totfine": 0,
+      "latestissuedate": "2023-08-18T12:34:05.706Z"
+    },
+    {
+      "booksissued": [],
+      "booksrequested": [],
+      "messages": [],
+      "id": 5,
+      "timestamp": "2023-08-12T08:45:50.626Z",
+      "latestissue": 0,
+      "latestquery": 0,
+      "latestMessage": 0,
+      "name": "lskdj",
+      "email": "lsjdlk@ljds.lkdjf",
+      "password": "$2a$13$o4ebfUPaxb2miSdeSpKb1.bDsFcuTUvmrQkObtAJ02WWEUi.hCMfu",
+      "phone": "NAN",
+      "Totfine": 0,
+      "latestissuedate": ""
+    },
+    {
+      "booksissued": [],
+      "booksrequested": [],
+      "messages": [
+        {
+          "messageid": 1,
+          "type": "Normal",
+          "message": "Your Request with request id Accepted by the admin."
+        }
+      ],
+      "id": 6,
+      "timestamp": "2023-08-18T12:39:16.707Z",
+      "latestissue": 0,
+      "latestquery": 1,
+      "latestMessage": 1,
+      "name": "Harry",
+      "img": "",
+      "email": "ldk@lsk.dlk",
+      "password": "$2a$13$uacPwa49w/Ql687.gjowqemb1EE2g1uNEJCS/hy6yp0Oeh2M81nKC",
+      "phone": "NAN",
+      "Totfine": 0,
+      "latestissuedate": "2023-08-18T12:39:02.597Z"
+    },
+    {
+      "booksissued": [],
+      "booksrequested": [],
+      "messages": [],
+      "id": 7,
+      "timestamp": "2023-08-18T13:24:01.864Z",
+      "latestissue": 10,
+      "latestquery": 10,
+      "latestMessage": 19,
+      "name": "Hello",
+      "img": "",
+      "email": "hi@lkd.skd",
+      "password": "$2a$13$Xw6q1aiBQsZCamziChuvz.lzjbaIIPahArwug296pNNFZuCDKa4M2",
+      "phone": "7883784939",
+      "Totfine": 0,
+      "latestissuedate": "2023-08-18T13:20:00.059Z"
+    },
+    {
+      "booksissued": [
+        {
+          "queryid": 1,
+          "bookid": 3,
+          "issueddate": "2023-08-18",
+          "returndate": "2023-09-02"
+        }
+      ],
+      "booksrequested": [],
+      "messages": [],
+      "id": 8,
+      "timestamp": "2023-08-18T13:38:35.149Z",
+      "latestissue": 1,
+      "latestquery": 1,
+      "latestMessage": 2,
+      "name": "Paul",
+      "img": "",
+      "email": "lsjfd@ljsd.dlj",
+      "password": "$2a$13$xiW2zLbcv1BdU9YOJPRbKeO5tN8G4zC/LjoDjO71Mi9r9kN1.x/zW",
+      "phone": "7676767676",
+      "Totfine": 0,
+      "latestissuedate": "2023-08-18T13:38:22.854Z"
     }
   ],
   "admin": {
-    "requests": [
-      {
-        "book": 12,
-        "issuer": 1,
-        "type": "Return",
-        "reqid": 0
-      },
-      {
-        "book": 28,
-        "issuer": 1,
-        "type": "Issue",
-        "reqid": 1
-      }
-    ],
+    "requests": [],
     "feedbacks": [],
-    "latestrequest": 2,
+    "latestrequest": 18,
     "latestfeedback": 0
   }
 }

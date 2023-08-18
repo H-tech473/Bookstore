@@ -48,6 +48,11 @@
     height: 100%;
     width: 100%;
 }
+.user-imgs img{
+    height: 100%;
+    width: 100%;
+    
+}
 
 .user-details{
     height: calc(35% - 10px);
@@ -70,7 +75,7 @@
     user-select: none;
     border-radius: 20px;
     overflow: hidden;
-    padding-left: 20px;
+    padding-left: 10px;
     align-items: flex-start;
     cursor: default;
     flex-direction: column;
@@ -84,10 +89,11 @@
     text-shadow: 1px 1px 2px var(--black-blur);
 }
 .user-details input{
-    background: none;
+    background-color: transparent;
     outline: none;
-    border: none;
     margin-left: 20px;
+    width: 14ch;
+    border: none;
     cursor: default;
     font-family: var(--san-fam);
     font-size: 1.8rem;
@@ -224,8 +230,18 @@
     font-weight: normal;
     line-height: 1.6rem;
 }
+.history-cont .history .Date-of-return1{
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 1.6rem;
+}
 .Date-of-return::before{
     content: 'Date of Return - ';
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.Date-of-return1::before{
+    content: 'Status - ';
     font-size: 1.6rem;
     font-weight: bold;
 }
@@ -263,10 +279,54 @@
     color: var(--gray);
 }
 
+.edit{
+    background: none;
+    color: var(--gray-blur);
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 40px;
+    position: absolute;
+    height: 40px;
+    width: auto;
+    right: 20px;
+    top: 25%;
+}
+.edit span{
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    font-family: var(--san-fam);
+    font-size: 1rem;
+}
+
+.message-con{
+    border-radius: 20px;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.message-con .close1{
+    position: absolute;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+    right: 0;
+}
+
 .div--red{
     background-color: var(--red-blur) !important;
 }
 .div--disabled{
     opacity: .5;
     pointer-events: none;
+}
+#inp--editable{
+    background-color: white ;
+    cursor: text;
 }

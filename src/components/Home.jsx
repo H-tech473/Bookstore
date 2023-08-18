@@ -15,7 +15,6 @@ function Home() {
         element.scrollLeft = 1229.5999755859375;
         element.style.scrollBehavior = "smooth";
         element.addEventListener("scroll", ()=>{
-            console.log(element.scrollLeft);
             if(element.scrollLeft >= 0 && element.scrollLeft < 1200.5999755859375){
                 setnumb(1);
                 setcolor("var(--red-blur)");
