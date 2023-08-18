@@ -3,10 +3,12 @@ import '../Styles/Contacts.css'
 import {AiFillFacebook, AiOutlineCopy, AiFillInstagram, AiFillTwitterSquare} from 'react-icons/ai'
 import {BiLogoGmail} from 'react-icons/bi'
 import SideMenu from './Side-Menu';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { feedbackAsync } from '../../features/Admin/adminsSlice';
 
 function Contacts() {
     const user = useSelector(selector=>selector.user.user);
+    const dispatch = useDispatch();
     const [msg, setmsg] = useState("");
     const [emai, setemail] = useState("");
     const [name, setname] = useState("");
@@ -67,14 +69,14 @@ function Contacts() {
                     <div className="socialmed-cont">
                         <div className="socials name">Creator - Harmanpreet Kumar</div>
                         <div className="socials gmail" onClick={()=>copyText("gm")}><span className='ic i1'><BiLogoGmail></BiLogoGmail></span>  <span className='gm' style={{fontFamily: "var(--san-fam)"}}>hp72711@gmail.com</span></div>
-                        <div className="socials facebook" onClick={()=>copyText("fa")}><span className='ic i2'><AiFillFacebook></AiFillFacebook></span>  <span className='fa' style={{fontFamily: "var(--san-fam)"}}>Hi</span></div>
-                        <div className="socials insta" onClick={()=>copyText("ins")}><span className='ic i3'><AiFillInstagram></AiFillInstagram></span>  <span className='ins' style={{fontFamily: "var(--san-fam)"}}>kese</span></div>
-                        <div className="socials twitter" onClick={()=>copyText("twi")}><span className='ic i4'><AiFillTwitterSquare></AiFillTwitterSquare></span>  <span className='twi' style={{fontFamily: "var(--san-fam)"}}>ho</span></div>
+                        <div className="socials facebook" onClick={()=>copyText("fa")}><span className='ic i2'><AiFillFacebook></AiFillFacebook></span>  <span className='fa' style={{fontFamily: "var(--san-fam)"}}>HarryExp</span></div>
+                        <div className="socials insta" onClick={()=>copyText("ins")}><span className='ic i3'><AiFillInstagram></AiFillInstagram></span>  <span className='ins' style={{fontFamily: "var(--san-fam)"}}>@harmanpreet</span></div>
+                        <div className="socials twitter" onClick={()=>copyText("twi")}><span className='ic i4'><AiFillTwitterSquare></AiFillTwitterSquare></span>  <span className='twi' style={{fontFamily: "var(--san-fam)"}}>@HarryExp</span></div>
                     </div>
                 </div>
                 <div className="feedbackpanel">
                     <div className="feed">Feedback</div>
-                    <form action="/" method="post">
+                    <section className='form'>
                         <div className="inp name-cont">
                             <input type="text" name="name" id="name" onChange={(e)=>fillet(e,1)} required value={name} />
                             <label htmlFor="name">Name</label>
@@ -91,10 +93,16 @@ function Contacts() {
                             <span className='feedback-icon' onClick={()=>fillit(3)}><AiOutlineCopy></AiOutlineCopy></span>
                         </div>
                         <div className="buttons">
-                            <button type="submit" className='btns'>Submit</button>
+                            <button type="submit" onClick={()=>{
+                                setele(<div key="hello" className="message"><div className="bar"></div> Feedback Sent </div>)
+                                dispatch(feedbackAsync({email: emai, message: msg, name: name}))
+                                setTimeout(() => {
+                                    setele("");
+                                }, 1000);
+                            }} className='btns'>Submit</button>
                             <button type="reset" className='btns' onClick={resetall}>Reset</button>
                         </div>
-                    </form>
+                    </section>
                 </div>
             </div>
         </div>

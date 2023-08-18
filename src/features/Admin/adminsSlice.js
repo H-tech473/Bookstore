@@ -58,7 +58,24 @@ export const sendAsync = createAsyncThunk(
   'admins/sendmessage',
   async (action) =>{
     const {data} = await fetchUsers(action.user.id);
-    const userupdated = await updateuserPatch({id: action.user.id, change: {messages: [...data.messages, {messageid: data.latestMessage+1, type: action.message.type, message: action.message.message}],latestMessage: data.latestMessage+1}})
+    await updateuserPatch({id: action.user.id, change: {messages: [...data.messages, {messageid: data.latestMessage+1, type: action.message.type, message: action.message.message}],latestMessage: data.latestMessage+1}})
+  }
+)
+
+export const feedbackAsync = createAsyncThunk(
+  'admins/feedback',
+  async (action) =>{
+    const {data} = await fetchAdmin();
+    const response = await updatePatch({feedbacks: [...data.feedbacks, {feedid: data.latestfeedback+1, name: action.name, email: action.email, message: action.message}], latestfeedback: data.latestfeedback+1});
+  }
+)
+
+export const changeAsync = createAsyncThunk(
+  'admins/change',
+  async (action) =>{
+    const {data} = await fetchAdmin();
+    const response = await updatePatch({feedbacks: data.feedbacks.filter(ele => ele.feedid !== action.feedid)})
+    return response.data
   }
 )
 
@@ -66,14 +83,8 @@ export const adminsSlice = createSlice({
   name: 'admins',
   initialState,
   reducers: {
-    Addrequest: (state, action) => {
-      state.books = state.books.filter(elem => elem.category === action.payload)
-    },
-    decrement: (state) => {
-      state.books -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.books += action.payload;
+    Logoutad: (state) => {
+      state.data = undefined
     },
   },
   extraReducers: (builder) => {
@@ -90,6 +101,20 @@ export const adminsSlice = createSlice({
       .addCase(fetchsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.data = action.payload;
+      })
+      .addCase(feedbackAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(feedbackAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.data = action.payload;
+      })
+      .addCase(changeAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(changeAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.data.admin = action.payload;
       })
       .addCase(sendAsync.pending, (state) => {
         state.status = 'loading';
@@ -114,6 +139,8 @@ export const adminsSlice = createSlice({
   },
 });
 
-export const { Addrequest, decrement, incrementByAmount } = adminsSlice.actions;
+
+
+export const { Logoutad } = adminsSlice.actions;
 
 export default adminsSlice.reducer;

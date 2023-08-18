@@ -160,7 +160,7 @@
     padding: 0 80px;
 }
 
-.feedbackpanel form{
+.feedbackpanel .form{
     display: flex;
     align-items: stretch;
     justify-content: center;

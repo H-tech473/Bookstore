@@ -17,7 +17,6 @@ function App() {
   useEffect(()=>{
     dispatch(fetchAsync());
     dispatch(fetgenreAsync())
-    dispatch(fetchuAsync(7))
   },[])
   const user = useSelector(selector => selector.user)
   const [sta, setsta] = useState(1);

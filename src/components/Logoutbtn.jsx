@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import './Styles/Logout.css';
 import { useDispatch } from 'react-redux';
 import { Logout } from '../features/Users/usersSlice';
+import { Logoutad } from '../features/Admin/adminsSlice';
 
 function Logoutbtn() {
   const dispatch = useDispatch();
@@ -12,7 +13,10 @@ function Logoutbtn() {
       damping: 15
   }
     return ( 
-        <motion.div whileHover={{scale: 1.2}} onClick={()=> dispatch(Logout())} transition={spring} className="logoutbtn">
+        <motion.div whileHover={{scale: 1.2}} onClick={()=> {
+          dispatch(Logout())
+          dispatch(Logoutad())
+        }} transition={spring} className="logoutbtn">
           <FiLogOut></FiLogOut>
         </motion.div>
      );

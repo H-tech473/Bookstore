@@ -309,7 +309,7 @@
     align-items: center;
     font-size: 1.5rem;
 }
-.message-con .close1{
+.close1{
     position: absolute;
     font-size: 2.5rem;
     display: flex;

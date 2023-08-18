@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import '../Styles/Admin.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { motion } from 'framer-motion';
-import { confirmAsync, sendAsync } from '../../features/Admin/adminsSlice';
+import { changeAsync, confirmAsync, fetchsync, sendAsync } from '../../features/Admin/adminsSlice';
 import { IssueEntry, returnEntry } from '../../features/Users/usersSlice';
+import { VscClose } from 'react-icons/vsc';
 
 function DataShown() {
 
@@ -138,12 +139,15 @@ function DataShown() {
                         feedback.map((element, ind) => {
                             return (
                                 <div key={ind} className="feedback-con">
-                                    <div className="id">{1}</div>
-                                    <div className="opt-name">{"Harman"}</div>
-                                    <div className="opt-email">{"abcls@gmail.com"}</div>
-                                    <div className="opt-message">{"Hi How are you?"}</div>
-                                    <motion.div whileHover={{scale: 1.1, backgroundColor: 'var(--gray)', color: 'var(--blue)'}} onClick={()=>setconfirm({})} className="acceptbtn">Accept</motion.div>
-                                    <motion.div whileHover={{scale: 1.1, backgroundColor: 'var(--gray)', color: 'var(--blue)'}} className="rejectbtn">Reject</motion.div>
+                                    <div className="id">{element.feedid}</div>
+                                    <div className="opt-name">{element.name}</div>
+                                    <div className="opt-email">{element.email}</div>
+                                    <div className="opt-message">{element.message}</div>
+                                    <motion.div whileHover={{scale: 1.2}} onClick={()=>{
+                                        dispatch(changeAsync({feedid: element.feedid}))
+                                        dispatch(fetchsync());
+                                        setfeedback(admin.data.admin.feedbacks !== undefined? admin.data.admin.feedbacks: []);
+                                    }} className='close2'><VscClose /></motion.div>
                                 </div>
                             )
                         }): ''
